@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sofia The First</title>
+    <style>
+        html{
+           
+        }
+        body{
+        display:inline-block;
+        width: 50%;
+	    margin:0 auto;
+        }
+        #FirstImage{
+            float:left;
+            width:500px;
+            height:500px;
+             display: flex;
+        }
+        #FirstParagraph{
+            float:right;
+            width:200px;
+            height:800px;
+            align-content:space-around;
+            font-size:30px;
+            
+        }
+        #SecondImage{
+            float:right;
+            position:relative;
+            bottom:10%;
+            right:20%;
+            
+        }
+        #SecondParagraph{
+            float:left;
+            width:500px;
+            height:500px;
+            font-size:25px;
+        }
+        #ShowImage{
+           
+        }
+        @media only screen and (max-width: 768x)
+    {
+    	html
+    }
+
+    </style>
+    <link rel="stylesheet"
+    href="//code.jquery.com/ui/1.12.1/themes/smoothness/jquery-ui.css">
+    <script src="//code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="//code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+</head>
+<body>
+    <h1 class="Underline"> Sofia The First</h1>
+    <div >
+        <p id="FirstParagraph">
+            Sofia the First is an American animated television series produced for Disney Channel. Jamie Mitchell
+            is the Director and Executive Producer and Craig Gerber serves as Story Editor and Producer. The show follows
+            the adventures of Sofia, played by Ariel Winter. Sofia becomes a princess when her mother, Miranda, ...
+        </p>
+
+
+        <img src="https://images-na.ssl-images-amazon.com/images/I/61xb%2BbVJ8hL.jpg" alt="Picture of Sofia The First and Friends"/>
+
+        <p id="SecondParagraph">
+            Disney has featured many princesses in its TV shows and movies through the years -- but never a little girl princess.
+            Until now. This animated series features Sofia, an ordinary girl who becomes a princess overnight when her mom marries the king.
+            The adventurous young girl, first introduced in the 2012 TV movie "Sofia the First: Once Upon a Princess," must learn how to adjust
+            to royal life. Offering Sofia words of wisdom are classic princesses -- including Ariel, Belle and Jasmine -- who make special appearances
+            as they help advise the youngster during her transition to royalty. Throughout her journey, Sofia learns that it isn't having a title
+            that imparts royal demeanor;
+            it's that having the characteristics of honesty, loyalty, compassion and grace make one worthy of the role.
+        </p>
+
+
+        <img id="ShowImage" src="http://cdn.shopify.com/s/files/1/0802/9923/products/999201_b4e973dd-9724-4f06-aae0-f8c96464102e_grande.jpeg?v=1487801151"
+          alt="Picture of Sofia The First and her Bird "  />
+        
+        <h3> Sofia's friends include:<h3>
+
+     <script>
+         function changeImage() {
+             document.getElementById("ShowImage").src = "https://lumiere-a.akamaihd.net/v1/images/51e205150f934de980cd1cd9_ce1f0fa5.jpeg?height=354&region=0%2C0%2C1920%2C1080&width=630";
+       
+         };
+         
+         var name = prompt("What is your name");
+         alert(name + " , Welcome to Sofia's World");
+
+         var repeat, friends =[];
+
+         while(repeat !== "no"){
+         	friends.push(prompt("What are the names of Sofia's friend?  "));
+         	repeat = prompt("Do yo know more freinds? yes/no");
+         	document.write(friends + "<br />");
+         }
+
+         $("p").hover(function () {
+             $(this).css("background-color", "yellow");
+         }, function () {
+             $(this).css("background-color", "pink");
+         });
+
+         $(document).ready(function () {
+             $(".Underline").hover(function () {
+                 $(this).css("color", "purple");
+             
+             });
+         });
+        
+
+    </script>
+    
+    <button onclick="changeImage()"> Change Image!</button>
+
+</body>
+<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+</html>
+
